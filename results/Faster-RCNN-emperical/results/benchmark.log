@@ -1,0 +1,81 @@
+2025/09/28 19:31:23 - mmengine - INFO - before build: 
+2025/09/28 19:31:23 - mmengine - INFO - (GB) mem_used: 1.31 | uss: 0.46 | pss: 0.50 | total_proc: 1
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer2.0.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer2.1.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer2.2.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer2.3.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer3.0.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer3.1.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer3.2.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer3.3.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer3.4.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer3.5.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer4.0.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer4.1.conv2 is upgraded to version 2.
+2025/09/28 19:31:25 - mmengine - INFO - DeformConv2dPack backbone.layer4.2.conv2 is upgraded to version 2.
+2025/09/28 19:31:26 - mmengine - INFO - after build: 
+2025/09/28 19:31:27 - mmengine - INFO - (GB) mem_used: 2.16 | uss: 1.54 | pss: 1.58 | total_proc: 1
+2025/09/28 19:31:29 - mmengine - INFO - ==================================
+2025/09/28 19:31:29 - mmengine - INFO - Done image [10 /43], fps: 8.2 img/s, times per image: 121.7 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:29 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:30 - mmengine - INFO - ==================================
+2025/09/28 19:31:31 - mmengine - INFO - Done image [20 /43], fps: 8.2 img/s, times per image: 121.7 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:31 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:32 - mmengine - INFO - ==================================
+2025/09/28 19:31:32 - mmengine - INFO - Done image [30 /43], fps: 8.2 img/s, times per image: 122.5 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:32 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:33 - mmengine - INFO - ==================================
+2025/09/28 19:31:33 - mmengine - INFO - Done image [40 /43], fps: 8.2 img/s, times per image: 122.7 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:33 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:35 - mmengine - INFO - ==================================
+2025/09/28 19:31:35 - mmengine - INFO - Done image [10 /43], fps: 8.1 img/s, times per image: 123.6 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:35 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:37 - mmengine - INFO - ==================================
+2025/09/28 19:31:37 - mmengine - INFO - Done image [20 /43], fps: 8.1 img/s, times per image: 123.1 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:37 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:38 - mmengine - INFO - ==================================
+2025/09/28 19:31:38 - mmengine - INFO - Done image [30 /43], fps: 8.1 img/s, times per image: 123.2 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:38 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:40 - mmengine - INFO - ==================================
+2025/09/28 19:31:40 - mmengine - INFO - Done image [40 /43], fps: 8.1 img/s, times per image: 123.4 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:40 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:41 - mmengine - INFO - ==================================
+2025/09/28 19:31:42 - mmengine - INFO - Done image [10 /43], fps: 8.1 img/s, times per image: 124.0 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:42 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:43 - mmengine - INFO - ==================================
+2025/09/28 19:31:43 - mmengine - INFO - Done image [20 /43], fps: 8.1 img/s, times per image: 123.2 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:43 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:44 - mmengine - INFO - ==================================
+2025/09/28 19:31:44 - mmengine - INFO - Done image [30 /43], fps: 8.1 img/s, times per image: 123.4 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:44 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:46 - mmengine - INFO - ==================================
+2025/09/28 19:31:46 - mmengine - INFO - Done image [40 /43], fps: 8.1 img/s, times per image: 123.7 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:46 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:48 - mmengine - INFO - ==================================
+2025/09/28 19:31:48 - mmengine - INFO - Done image [10 /43], fps: 8.0 img/s, times per image: 125.3 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:48 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:49 - mmengine - INFO - ==================================
+2025/09/28 19:31:49 - mmengine - INFO - Done image [20 /43], fps: 8.0 img/s, times per image: 124.9 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:49 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:51 - mmengine - INFO - ==================================
+2025/09/28 19:31:51 - mmengine - INFO - Done image [30 /43], fps: 8.0 img/s, times per image: 124.8 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:51 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:52 - mmengine - INFO - ==================================
+2025/09/28 19:31:52 - mmengine - INFO - Done image [40 /43], fps: 8.0 img/s, times per image: 125.0 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:52 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:54 - mmengine - INFO - ==================================
+2025/09/28 19:31:54 - mmengine - INFO - Done image [10 /43], fps: 7.9 img/s, times per image: 126.3 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:54 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:55 - mmengine - INFO - ==================================
+2025/09/28 19:31:55 - mmengine - INFO - Done image [20 /43], fps: 8.0 img/s, times per image: 125.5 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:56 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:57 - mmengine - INFO - ==================================
+2025/09/28 19:31:57 - mmengine - INFO - Done image [30 /43], fps: 8.0 img/s, times per image: 125.3 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:57 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:58 - mmengine - INFO - ==================================
+2025/09/28 19:31:58 - mmengine - INFO - Done image [40 /43], fps: 8.0 img/s, times per image: 125.6 ms/img, cuda memory: 530 MB
+2025/09/28 19:31:58 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1
+2025/09/28 19:31:59 - mmengine - INFO - ============== Done ==================
+2025/09/28 19:31:59 - mmengine - INFO - Overall fps: [8.1, 8.1, 8.1, 8.0, 8.0][8.1] img/s, times per image: [122.8, 123.3, 123.7, 125.1, 125.6][124.1] ms/img
+2025/09/28 19:31:59 - mmengine - INFO - cuda memory: 530 MB
+2025/09/28 19:31:59 - mmengine - INFO - (GB) mem_used: 3.05 | uss: 2.70 | pss: 2.74 | total_proc: 1

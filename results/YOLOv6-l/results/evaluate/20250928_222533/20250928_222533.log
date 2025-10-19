@@ -1,0 +1,557 @@
+2025/09/28 22:25:34 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.11.13 (main, Jun  4 2025, 08:57:29) [GCC 11.4.0]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 1863051480
+    GPU 0,1: Tesla T4
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 12.5, V12.5.82
+    GCC: x86_64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+    PyTorch: 2.0.0+cu117
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2025.2-Product Build 20250620 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.7.3 (Git Hash 6dbeffbae1f23cbbeae17adb7b5b13f1f37c080e)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.7
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86
+  - CuDNN 8.5
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.7, CUDNN_VERSION=8.5.0, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.0.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.15.1+cu117
+    OpenCV: 4.11.0
+    MMEngine: 0.10.7
+
+Runtime environment:
+    cudnn_benchmark: True
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 1863051480
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+2025/09/28 22:25:34 - mmengine - INFO - Config:
+affine_scale = 0.5
+backend_args = None
+base_lr = 0.01
+batch_shapes_cfg = dict(
+    batch_size=2,
+    extra_pad_ratio=0.5,
+    img_size=640,
+    size_divisor=32,
+    type='BatchShapePolicy')
+data_root = './datasets/'
+dataset_type = 'YOLOv5CocoDataset'
+deepen_factor = 1
+default_hooks = dict(
+    checkpoint=dict(
+        interval=1, max_keep_ckpts=1, save_best='auto', type='CheckpointHook'),
+    logger=dict(interval=5, type='LoggerHook'),
+    param_scheduler=dict(
+        lr_factor=0.01,
+        max_epochs=100,
+        scheduler_type='cosine',
+        type='YOLOv5ParamSchedulerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'),
+    visualization=dict(type='mmdet.DetVisualizationHook'))
+default_scope = 'mmyolo'
+env_cfg = dict(
+    cudnn_benchmark=True,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+img_scale = (
+    640,
+    640,
+)
+launcher = 'none'
+load_from = '/kaggle/input/inference-yolov6/best_coco_MP_precision_epoch_23.pth'
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=50)
+lr_factor = 0.01
+max_epochs = 100
+max_keep_ckpts = 1
+metainfo = dict(classes=(
+    'MP',
+    'OC',
+    'SC',
+    'SP',
+    'SPC',
+))
+model = dict(
+    backbone=dict(
+        act_cfg=dict(inplace=True, type='SiLU'),
+        block_cfg=dict(
+            norm_cfg=dict(eps=0.001, momentum=0.03, type='BN'),
+            type='ConvWrapper'),
+        deepen_factor=1,
+        hidden_ratio=0.5,
+        norm_cfg=dict(eps=0.001, momentum=0.03, type='BN'),
+        out_indices=[
+            1,
+            2,
+            3,
+            4,
+        ],
+        type='YOLOv6CSPBep',
+        use_cspsppf=True,
+        widen_factor=1),
+    bbox_head=dict(
+        head_module=dict(
+            act_cfg=dict(inplace=True, type='SiLU'),
+            featmap_strides=[
+                8,
+                16,
+                32,
+            ],
+            in_channels=[
+                128,
+                256,
+                512,
+            ],
+            norm_cfg=dict(eps=0.001, momentum=0.03, type='BN'),
+            num_classes=5,
+            reg_max=16,
+            type='YOLOv6HeadModule',
+            widen_factor=1),
+        loss_bbox=dict(
+            bbox_format='xyxy',
+            iou_mode='giou',
+            loss_weight=2.5,
+            reduction='mean',
+            return_iou=False,
+            type='IoULoss'),
+        type='YOLOv6Head'),
+    data_preprocessor=dict(
+        bgr_to_rgb=True,
+        mean=[
+            0.0,
+            0.0,
+            0.0,
+        ],
+        std=[
+            255.0,
+            255.0,
+            255.0,
+        ],
+        type='YOLOv5DetDataPreprocessor'),
+    neck=dict(
+        act_cfg=dict(inplace=True, type='ReLU'),
+        block_act_cfg=dict(inplace=True, type='SiLU'),
+        block_cfg=dict(
+            norm_cfg=dict(eps=0.001, momentum=0.03, type='BN'),
+            type='ConvWrapper'),
+        deepen_factor=1,
+        hidden_ratio=0.5,
+        in_channels=[
+            128,
+            256,
+            512,
+            1024,
+        ],
+        norm_cfg=dict(eps=0.001, momentum=0.03, type='BN'),
+        num_csp_blocks=12,
+        out_channels=[
+            128,
+            256,
+            512,
+        ],
+        type='YOLOv6CSPRepBiPAFPN',
+        widen_factor=1),
+    test_cfg=dict(
+        max_per_img=300,
+        multi_label=True,
+        nms=dict(iou_threshold=0.65, type='nms'),
+        nms_pre=30000,
+        score_thr=0.001),
+    train_cfg=dict(
+        assigner=dict(
+            alpha=1,
+            beta=6,
+            num_classes=5,
+            topk=13,
+            type='BatchTaskAlignedAssigner'),
+        initial_assigner=dict(
+            iou_calculator=dict(type='mmdet.BboxOverlaps2D'),
+            num_classes=5,
+            topk=9,
+            type='BatchATSSAssigner'),
+        initial_epoch=4),
+    type='YOLODetector')
+num_classes = 5
+optim_wrapper = dict(
+    constructor='YOLOv5OptimizerConstructor',
+    optimizer=dict(
+        batch_size_per_gpu=4,
+        lr=0.01,
+        momentum=0.937,
+        nesterov=True,
+        type='SGD',
+        weight_decay=0.0005),
+    type='OptimWrapper')
+persistent_workers = True
+pre_transform = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True),
+]
+resume = False
+save_epoch_intervals = 1
+test_cfg = dict(type='TestLoop')
+test_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        ann_file='val.json',
+        batch_shapes_cfg=dict(
+            batch_size=2,
+            extra_pad_ratio=0.5,
+            img_size=640,
+            size_divisor=32,
+            type='BatchShapePolicy'),
+        data_prefix=dict(img='val/'),
+        data_root='./datasets/',
+        metainfo=dict(classes=(
+            'MP',
+            'OC',
+            'SC',
+            'SP',
+            'SPC',
+        )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=True,
+                pad_val=dict(img=114.0),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+            dict(_scope_='mmdet', type='LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'pad_param',
+                ),
+                type='mmdet.PackDetInputs'),
+        ],
+        test_mode=True,
+        type='YOLOv5CocoDataset'),
+    drop_last=False,
+    num_workers=1,
+    persistent_workers=True,
+    pin_memory=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(
+    ann_file='./datasets/val.json',
+    classwise=True,
+    metric='bbox',
+    proposal_nums=(
+        100,
+        1,
+        10,
+    ),
+    type='mmdet.CocoMetric')
+test_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(scale=(
+        640,
+        640,
+    ), type='YOLOv5KeepRatioResize'),
+    dict(
+        allow_scale_up=True,
+        pad_val=dict(img=114.0),
+        scale=(
+            640,
+            640,
+        ),
+        type='LetterResize'),
+    dict(_scope_='mmdet', type='LoadAnnotations', with_bbox=True),
+    dict(
+        meta_keys=(
+            'img_id',
+            'img_path',
+            'ori_shape',
+            'img_shape',
+            'scale_factor',
+            'pad_param',
+        ),
+        type='mmdet.PackDetInputs'),
+]
+train_ann_file = 'train.json'
+train_batch_size_per_gpu = 4
+train_cfg = dict(max_epochs=100, type='EpochBasedTrainLoop', val_interval=1)
+train_data_prefix = 'train/'
+train_dataloader = dict(
+    batch_size=4,
+    collate_fn=dict(type='yolov5_collate'),
+    dataset=dict(
+        ann_file='train.json',
+        data_prefix=dict(img='train/'),
+        data_root='./datasets/',
+        filter_cfg=dict(filter_empty_gt=False, min_size=32),
+        metainfo=dict(classes=(
+            'MP',
+            'OC',
+            'SC',
+            'SP',
+            'SPC',
+        )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=True,
+                pad_val=dict(img=114.0),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                ),
+                type='mmdet.PackDetInputs'),
+        ],
+        type='YOLOv5CocoDataset'),
+    num_workers=1,
+    persistent_workers=True,
+    pin_memory=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+train_num_workers = 1
+train_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(scale=(
+        640,
+        640,
+    ), type='YOLOv5KeepRatioResize'),
+    dict(
+        allow_scale_up=True,
+        pad_val=dict(img=114.0),
+        scale=(
+            640,
+            640,
+        ),
+        type='LetterResize'),
+    dict(
+        meta_keys=(
+            'img_id',
+            'img_path',
+            'ori_shape',
+            'img_shape',
+        ),
+        type='mmdet.PackDetInputs'),
+]
+val_ann_file = 'val.json'
+val_batch_size_per_gpu = 2
+val_cfg = dict(type='ValLoop')
+val_data_prefix = 'val/'
+val_dataloader = dict(
+    batch_size=2,
+    dataset=dict(
+        ann_file='val.json',
+        batch_shapes_cfg=dict(
+            batch_size=2,
+            extra_pad_ratio=0.5,
+            img_size=640,
+            size_divisor=32,
+            type='BatchShapePolicy'),
+        data_prefix=dict(img='val/'),
+        data_root='./datasets/',
+        metainfo=dict(classes=(
+            'MP',
+            'OC',
+            'SC',
+            'SP',
+            'SPC',
+        )),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(scale=(
+                640,
+                640,
+            ), type='YOLOv5KeepRatioResize'),
+            dict(
+                allow_scale_up=True,
+                pad_val=dict(img=114.0),
+                scale=(
+                    640,
+                    640,
+                ),
+                type='LetterResize'),
+            dict(_scope_='mmdet', type='LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                    'pad_param',
+                ),
+                type='mmdet.PackDetInputs'),
+        ],
+        test_mode=True,
+        type='YOLOv5CocoDataset'),
+    drop_last=False,
+    num_workers=1,
+    persistent_workers=True,
+    pin_memory=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    ann_file='./datasets/val.json',
+    classwise=True,
+    metric='bbox',
+    proposal_nums=(
+        100,
+        1,
+        10,
+    ),
+    type='mmdet.CocoMetric')
+val_num_workers = 1
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+visualizer = dict(
+    name='visualizer',
+    type='mmdet.DetLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+weight_decay = 0.0005
+widen_factor = 1
+work_dir = 'results/evaluate'
+
+2025/09/28 22:25:37 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+2025/09/28 22:25:37 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(9           ) YOLOv5ParamSchedulerHook           
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(9           ) YOLOv5ParamSchedulerHook           
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(9           ) YOLOv5ParamSchedulerHook           
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(9           ) YOLOv5ParamSchedulerHook           
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(9           ) YOLOv5ParamSchedulerHook           
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+2025/09/28 22:25:38 - mmengine - WARNING - The prefix is not set in metric class DumpResults.
+2025/09/28 22:25:40 - mmengine - INFO - Load checkpoint from /kaggle/input/inference-yolov6/best_coco_MP_precision_epoch_23.pth
+2025/09/28 22:25:44 - mmengine - INFO - Epoch(test) [ 5/22]    eta: 0:00:14  time: 0.8474  data_time: 0.0471  memory: 9025  
+2025/09/28 22:25:45 - mmengine - INFO - Epoch(test) [10/22]    eta: 0:00:05  time: 0.4773  data_time: 0.0239  memory: 416  
+2025/09/28 22:25:45 - mmengine - INFO - Epoch(test) [15/22]    eta: 0:00:02  time: 0.3530  data_time: 0.0161  memory: 416  
+2025/09/28 22:25:46 - mmengine - INFO - Epoch(test) [20/22]    eta: 0:00:00  time: 0.2912  data_time: 0.0122  memory: 416  
+2025/09/28 22:25:48 - mmengine - INFO - Evaluating bbox...
+2025/09/28 22:25:49 - mmengine - INFO - 
++----------+-------+--------+--------+-------+-------+-------+
+| category | mAP   | mAP_50 | mAP_75 | mAP_s | mAP_m | mAP_l |
++----------+-------+--------+--------+-------+-------+-------+
+| MP       | 0.364 | 0.52   | 0.439  | nan   | 0.188 | 0.678 |
+| OC       | 0.205 | 0.503  | 0.144  | nan   | 0.315 | 0.064 |
+| SC       | 0.179 | 0.335  | 0.156  | nan   | 0.179 | 0.252 |
+| SP       | 0.283 | 0.5    | 0.294  | nan   | 0.293 | nan   |
+| SPC      | 0.162 | 0.504  | 0.044  | nan   | 0.189 | 0.147 |
++----------+-------+--------+--------+-------+-------+-------+
+2025/09/28 22:25:49 - mmengine - INFO - bbox_mAP_copypaste: 0.239 0.472 0.215 -1.000 0.233 0.285
+2025/09/28 22:25:49 - mmengine - INFO - Results has been saved to results/results.pkl.
+2025/09/28 22:25:49 - mmengine - INFO - Epoch(test) [22/22]    coco/MP_precision: 0.3640  coco/OC_precision: 0.2050  coco/SC_precision: 0.1790  coco/SP_precision: 0.2830  coco/SPC_precision: 0.1620  coco/bbox_mAP: 0.2390  coco/bbox_mAP_50: 0.4720  coco/bbox_mAP_75: 0.2150  coco/bbox_mAP_s: -1.0000  coco/bbox_mAP_m: 0.2330  coco/bbox_mAP_l: 0.2850  data_time: 0.0111  time: 0.3609

@@ -1,0 +1,26 @@
+2025/09/28 22:38:05 - mmengine - INFO - Done image [10 / 43], fps: 9.0 img / s, times per image: 111.6 ms / img
+2025/09/28 22:38:07 - mmengine - INFO - Done image [20 / 43], fps: 9.0 img / s, times per image: 111.2 ms / img
+2025/09/28 22:38:08 - mmengine - INFO - Done image [30 / 43], fps: 9.0 img / s, times per image: 111.5 ms / img
+2025/09/28 22:38:10 - mmengine - INFO - Done image [40 / 43], fps: 8.9 img / s, times per image: 111.8 ms / img
+2025/09/28 22:38:10 - mmengine - INFO - Overall fps: 8.9 img / s, times per image: 111.9 ms / img
+2025/09/28 22:38:14 - mmengine - INFO - Done image [10 / 43], fps: 8.8 img / s, times per image: 113.1 ms / img
+2025/09/28 22:38:15 - mmengine - INFO - Done image [20 / 43], fps: 8.9 img / s, times per image: 112.8 ms / img
+2025/09/28 22:38:17 - mmengine - INFO - Done image [30 / 43], fps: 8.9 img / s, times per image: 113.0 ms / img
+2025/09/28 22:38:18 - mmengine - INFO - Done image [40 / 43], fps: 8.9 img / s, times per image: 112.8 ms / img
+2025/09/28 22:38:19 - mmengine - INFO - Overall fps: 8.9 img / s, times per image: 112.9 ms / img
+2025/09/28 22:38:22 - mmengine - INFO - Done image [10 / 43], fps: 8.8 img / s, times per image: 114.3 ms / img
+2025/09/28 22:38:24 - mmengine - INFO - Done image [20 / 43], fps: 8.8 img / s, times per image: 114.0 ms / img
+2025/09/28 22:38:25 - mmengine - INFO - Done image [30 / 43], fps: 8.8 img / s, times per image: 114.0 ms / img
+2025/09/28 22:38:27 - mmengine - INFO - Done image [40 / 43], fps: 8.8 img / s, times per image: 114.3 ms / img
+2025/09/28 22:38:27 - mmengine - INFO - Overall fps: 8.7 img / s, times per image: 114.4 ms / img
+2025/09/28 22:38:30 - mmengine - INFO - Done image [10 / 43], fps: 8.7 img / s, times per image: 114.9 ms / img
+2025/09/28 22:38:32 - mmengine - INFO - Done image [20 / 43], fps: 8.7 img / s, times per image: 115.2 ms / img
+2025/09/28 22:38:33 - mmengine - INFO - Done image [30 / 43], fps: 8.7 img / s, times per image: 115.3 ms / img
+2025/09/28 22:38:35 - mmengine - INFO - Done image [40 / 43], fps: 8.7 img / s, times per image: 115.1 ms / img
+2025/09/28 22:38:35 - mmengine - INFO - Overall fps: 8.7 img / s, times per image: 115.1 ms / img
+2025/09/28 22:38:39 - mmengine - INFO - Done image [10 / 43], fps: 8.6 img / s, times per image: 116.4 ms / img
+2025/09/28 22:38:40 - mmengine - INFO - Done image [20 / 43], fps: 8.6 img / s, times per image: 116.0 ms / img
+2025/09/28 22:38:42 - mmengine - INFO - Done image [30 / 43], fps: 8.6 img / s, times per image: 116.2 ms / img
+2025/09/28 22:38:43 - mmengine - INFO - Done image [40 / 43], fps: 8.6 img / s, times per image: 116.3 ms / img
+2025/09/28 22:38:44 - mmengine - INFO - Overall fps: 8.6 img / s, times per image: 116.3 ms / img
+2025/09/28 22:38:44 - mmengine - INFO - Overall fps: [8.9, 8.9, 8.7, 8.7, 8.6][8.8] img / s, times per image: [111.9, 112.9, 114.4, 115.1, 116.3][114.1] ms / img
